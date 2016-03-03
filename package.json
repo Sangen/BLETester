@@ -9,7 +9,7 @@
   "author": "Sangen",
   "license": "MIT",
   "dependencies": {
-    "bleno": "^0.1.14",
+    "bleno": "^0.3.5",
     "config": "^1.15.0"
   },
   "devDependencies": {

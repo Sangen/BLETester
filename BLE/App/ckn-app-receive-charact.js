@@ -14,7 +14,9 @@
     this.app = app;
 
     this.app.on('postWithNotify', function(id) {
+      console.log('postWithNotify out: ', id);
       if (this.updateValueCallback) {
+        console.log('postWithNotify in: ', id);
         var data = new Buffer(20);
         for (var i = 0; i < 20; ++i) {
           data.writeUInt8(id, 0);
@@ -27,7 +29,8 @@
 
   util.inherits(CKNAppReceiveCharact, bleno.Characteristic);
 
-  CKNAppReceiveCharact.prototype.onSubscribe = function() {
+  CKNAppReceiveCharact.prototype.onSubscribe = function(maxValueSize, updateValueCallback) {
+    this.updateValueCallback = updateValueCallback;
     console.log('[subscribe] => SUCCESS');
   };
 
