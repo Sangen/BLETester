@@ -11,8 +11,5 @@
   "dependencies": {
     "bleno": "^0.3.5",
     "config": "^1.15.0"
-  },
-  "devDependencies": {
-    "expect.js": "^0.3.1"
   }
 }
